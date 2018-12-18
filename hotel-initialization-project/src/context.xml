@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean id="hotelBean"
+		class="com.jspiders.spring.hotel.bean.HotelBean">
+		<!-- SPRING USES SETTER INITIALIZATION -->
+		<!-- <property name="hotelName" value="JW-Marriot"></property> <property 
+			name="hotelLocation" value="Bangalore"></property> <property name="rating" 
+			value="3.8"></property> <property name="isVeg" value="true"></property> <property 
+			name="branches" value="26"></property> -->
+		<!-- Initialization Using Parameterized Constructor -->
+		<constructor-arg name="hName" value="Tah-Hotel"></constructor-arg>
+		<constructor-arg name="hLocation" value="Mumbai"></constructor-arg>
+		<constructor-arg name="rating" value="4.5"></constructor-arg>
+		<constructor-arg name="isVeg" value="true"></constructor-arg>
+		<constructor-arg name="branches" value="2"></constructor-arg>
+	</bean>
+
+	<!-- <bean id="hotelBean1" class="com.jspiders.spring.hotel.bean.HotelBean"> 
+		</bean> -->
+</beans>
